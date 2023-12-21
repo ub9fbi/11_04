@@ -18,7 +18,5 @@ public class Class1 {
             return false;
         }
     }
-    public void isGraf () {
 
-    }
 }
