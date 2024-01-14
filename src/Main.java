@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 
-public class Main {
+public class Example11_09JFrame extends javax.swing.JFrame {
     public static void main(String[] args) {
         int x1, y1, x2, y2;
 
@@ -29,11 +29,6 @@ public class Main {
             x2 = Integer.parseInt(x2Field.getText());
             y2 = Integer.parseInt(y2Field.getText());
 
-            Rectangle rectangle = new Rectangle(x1, y1, x2, y2);
-            FilledRectangle filledRectangle = new FilledRectangle(x1, y1, x2, y2, "Filled Rectangle", Color.GREEN);
-
-            rectangle.drawRectangle();
-            filledRectangle.drawFilledRectangle(x2, x1, y2, y1);
         } else {
             System.exit(0);
         }
