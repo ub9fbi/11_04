@@ -9,7 +9,7 @@ public class Time {
     int sec;
 
     public int sumTimeSecond() {
-        return (hour * 3600) + (min * 60) + sec;
+        return sec = (hour * 3600) + (min * 60) + sec;
     }
 
     public void sumFiveSecond() {

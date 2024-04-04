@@ -1,27 +1,12 @@
 import javax.xml.crypto.Data;
 
 public class Train extends Time {
-    public String trainNumber;
+    public int trainNumber;
     public String direction;
-    public int departureTime;
 
-    public int calculateMinutesToDeparture(String trainNumber, Data time){
-
-
-
-
-
-        return 0;
-
-
-
-
-
+    public void calculateMinutesToDeparture(){
 
     }
-
-
-
 }
 
 /*public class Train {
