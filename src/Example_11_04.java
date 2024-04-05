@@ -30,6 +30,7 @@ public class Example_11_04 extends JFrame {
     private void initComponents(){
 
 
+
     }
     // копирование данных из текущего обьекта списка в поля формы и обратно
     protected void getTrain() {
