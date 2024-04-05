@@ -36,9 +36,8 @@ public class Example_11_04 extends JFrame {
         if (currentInd >= 0) {
             JtextFieldHour.setText(String.valueOf(trainArrayList.get(currentInd).hour));
             JtextFieldMin.setText(String.valueOf(trainArrayList.get(currentInd).min));
-            JtextFieldSec.setText(String.valueOf(trainArrayList.get(currentInd).sec));
             JFormattedTextFieldSec.setText("" + trainArrayList.get(currentInd).sec);
-            JFormattedTextFieldDir.setText("" + trainArrayList.get(currentInd).direction);
+            JFormattedTextFieldDir.setText("" + trainArrayList.get(currentInd).directionTrain);
             JFormattedTextFieldTrainNumb.setText("" + trainArrayList.get(currentInd).trainNumber);
         }
 
@@ -48,7 +47,6 @@ public class Example_11_04 extends JFrame {
                 && ((currentInd >= 0) && JtextFieldSec.getText() != null)) {
             trainArrayList.get(currentInd).hour = Integer.parseInt(JtextFieldHour.getText());
             trainArrayList.get(currentInd).min = Integer.parseInt(JtextFieldMin.getText());
-            trainArrayList.get(currentInd).sec = Integer.parseInt(JtextFieldSec.getText());
             try {
                 trainArrayList.get(currentInd).sec = new Integer(JtextFieldSec.getText());
             } catch (Exception e) {
@@ -63,21 +61,20 @@ public class Example_11_04 extends JFrame {
                 JFormattedTextFieldTrainNumb.setText(null);
             }
             try {
-                trainArrayList.get(currentInd).direction = String.valueOf(new Integer(JtextFieldDirection.getText()));
-
+                trainArrayList.get(currentInd).directionTrain = String.valueOf(new Integer(JtextFieldDirection.getText()));
             }
             catch (Exception e) {
-                trainArrayList.get(currentInd).direction = String.valueOf(0);
+                trainArrayList.get(currentInd).directionTrain = String.valueOf(0);
                 JtextFieldDirection.setText(null);
             }
         }
     }
 
-
     public static void main(String[] args) {
-        Example_11_04 dialog = new Example_11_04();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
+        JFrame frame = new JFrame("Задание_11_04");
+        frame.setContentPane(new Example_11_04().contentPane);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 }
