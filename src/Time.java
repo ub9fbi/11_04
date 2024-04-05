@@ -7,13 +7,13 @@ public class Time {
     int hour;
     int min;
     int sec;
+    LocalTime localTime = LocalTime.of(hour,min);
 
-    public int sumTimeSecond() {
-        return sec = (hour * 3600) + (min * 60) + sec;
-    }
+    public void sumTimeSecond() {
+         sec = (hour * 3600) + (min * 60);
+    };
 
     public void sumFiveSecond() {
-        LocalTime localTime = LocalTime.of(hour,min,sec);
-        System.out.println(localTime.plusSeconds(5));
+        localTime.plusSeconds(5);
     }
 }

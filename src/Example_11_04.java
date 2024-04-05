@@ -6,8 +6,8 @@ public class Example_11_04 extends JFrame {
     int currentInd;
     private JPanel contentPane;
     private JFormattedTextField JFormattedTextFieldSec;
-    private JFormattedTextField JFormattedTextField;
-
+    private JFormattedTextField JFormattedTextFieldDir;
+    private JFormattedTextField JFormattedTextFieldTrainNumb;
     private JButton buttonSec; // кнопка вызова метода sumTimeSecond, производит расчет времени в секундах
     private JButton buttonPlus5Sec; // кнопка вызова метода sumFiveSecond, добавляет 5 секунд к введенному времмени
     private JButton buttonDepartureTime;    // расчет количества минут до отправления поезда
@@ -19,8 +19,8 @@ public class Example_11_04 extends JFrame {
     private JTextField JtextFieldDepartureTime;  // время отправления
     private JSpinner JSpinnerCrn;
     private JTextField JTextFieldCount; // вывод номера
-    private JButton JButtonNewTime; // добавить новое время
-    private JButton JbuttonDelTime; // удалить время
+    private JButton JButtonNewTrain; // добавить новый поезд
+    private JButton JbuttonDelTrain; // удалить поезд
 
     public Example_11_04() {
         initComponents();
@@ -31,17 +31,48 @@ public class Example_11_04 extends JFrame {
 
 
     }
+    // копирование данных из текущего обьекта списка в поля формы и обратно
     protected void getTrain() {
         if (currentInd >= 0) {
             JtextFieldHour.setText(String.valueOf(trainArrayList.get(currentInd).hour));
             JtextFieldMin.setText(String.valueOf(trainArrayList.get(currentInd).min));
             JtextFieldSec.setText(String.valueOf(trainArrayList.get(currentInd).sec));
             JFormattedTextFieldSec.setText("" + trainArrayList.get(currentInd).sec);
-            JFormattedTextField.setText("" + trainArrayList.get(currentInd).);
-
+            JFormattedTextFieldDir.setText("" + trainArrayList.get(currentInd).direction);
+            JFormattedTextFieldTrainNumb.setText("" + trainArrayList.get(currentInd).trainNumber);
         }
 
     }
+    protected void setTrain () {
+        if (((currentInd >= 0) && JtextFieldHour.getText() != null ) && ((currentInd >= 0) && JtextFieldMin.getText() != null)
+                && ((currentInd >= 0) && JtextFieldSec.getText() != null)) {
+            trainArrayList.get(currentInd).hour = Integer.parseInt(JtextFieldHour.getText());
+            trainArrayList.get(currentInd).min = Integer.parseInt(JtextFieldMin.getText());
+            trainArrayList.get(currentInd).sec = Integer.parseInt(JtextFieldSec.getText());
+            try {
+                trainArrayList.get(currentInd).sec = new Integer(JtextFieldSec.getText());
+            } catch (Exception e) {
+                trainArrayList.get(currentInd).sec = 0;
+                JtextFieldHour.setText(null);
+            }
+            try {
+                trainArrayList.get(currentInd).trainNumber = new Integer(JFormattedTextFieldTrainNumb.getText());
+
+            } catch (Exception e) {
+                trainArrayList.get(currentInd).trainNumber = 0;
+                JFormattedTextFieldTrainNumb.setText(null);
+            }
+            try {
+                trainArrayList.get(currentInd).direction = String.valueOf(new Integer(JtextFieldDirection.getText()));
+
+            }
+            catch (Exception e) {
+                trainArrayList.get(currentInd).direction = String.valueOf(0);
+                JtextFieldDirection.setText(null);
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         Example_11_04 dialog = new Example_11_04();

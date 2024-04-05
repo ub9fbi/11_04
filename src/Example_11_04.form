@@ -140,7 +140,7 @@
               <text value="Секунды"/>
             </properties>
           </component>
-          <component id="1fad6" class="javax.swing.JButton" binding="JButtonNewTime">
+          <component id="1fad6" class="javax.swing.JButton" binding="JButtonNewTrain">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -148,7 +148,7 @@
               <text value="Новый"/>
             </properties>
           </component>
-          <component id="9bf7" class="javax.swing.JButton" binding="JbuttonDelTime">
+          <component id="9bf7" class="javax.swing.JButton" binding="JbuttonDelTrain">
             <constraints>
               <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
