@@ -30,6 +30,7 @@ public class Example_11_04 extends JFrame {
     private JLabel jLabelDepartHour;
     private JLabel jLabelDepartMin;
     private JSpinner jSpinnerCrn;
+    private javax.swing.JPanel JPanel;
 
     public Example_11_04() {
         initComponents();
@@ -63,5 +64,11 @@ public class Example_11_04 extends JFrame {
         jSpinnerCrn = new javax.swing.JSpinner();
     }
 
-
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Example_11_04");
+        frame.setContentPane(new Example_11_04().JPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
