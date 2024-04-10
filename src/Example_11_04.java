@@ -1,33 +1,35 @@
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
-public class Example_11_04 extends JFrame{
+public class Example_11_04 extends JFrame {
+    //  массив для хранения поездов
     ArrayList<Train> trainArrayList;
+    //  переменная хранит номер текущего обьекта из списка trainArrayList
     private int currentInd;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JButton jButtonNew;
-    private JButton jButtonDelete;
+    //  поля ввода
+    private JTextField jTextFieldTimeHour;
+    private JTextField jTextFieldTimeMin;
+    private JTextField jTextFieldTimeSec;
+    private JTextField jTextFieldNumbTrain;
+    private JTextField jTextFieldDirectTrain;
+    private JTextField jTextFieldHourDepartTrain;
+    private JTextField jTextFieldMinDepartTrain;
+    private JTextField jTextFieldCount;
+    private JButton jButtonNewTrain;
+    private JButton jButtonDeleteTrain;
     private JButton jButtonCalcTimeSeconds;
     private JButton jButtonPlus_5_sec;
-    private JTextField textField4;
-    private JSpinner spinner1;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField8;
-    private JTextField textField9;
     private JButton jButtonCalcDeparTime;
-    private JLabel jLabel1;
-    private JLabel jLabel2;
-    private JLabel jLabel3;
-    private JLabel jLabel4;
-    private JLabel jLabel5;
-    private JLabel jLabel6;
-    private JLabel jLabel7;
-    private JLabel jLabel8;
-    private JLabel jLabel9;
+    private JLabel jLabelTitleTime;
+    private JLabel jLabelHour;
+    private JLabel jLabelMin;
+    private JLabel jLabelSec;
+    private JLabel jLabelDepartureTime;
+    private JLabel jLabelNumbTrain;
+    private JLabel jLabelDirect;
+    private JLabel jLabelDepartHour;
+    private JLabel jLabelDepartMin;
+    private JSpinner jSpinnerCrn;
 
     public Example_11_04() {
         initComponents();
@@ -36,6 +38,30 @@ public class Example_11_04 extends JFrame{
     }
 
     private void initComponents() {
-
+        jTextFieldTimeHour = new javax.swing.JTextField();
+        jTextFieldTimeMin = new javax.swing.JTextField();
+        jTextFieldTimeSec = new javax.swing.JTextField();
+        jTextFieldNumbTrain = new javax.swing.JTextField();
+        jTextFieldDirectTrain = new javax.swing.JTextField();
+        jTextFieldHourDepartTrain = new javax.swing.JTextField();
+        jTextFieldMinDepartTrain = new javax.swing.JTextField();
+        jTextFieldCount = new javax.swing.JTextField();
+        jButtonNewTrain = new javax.swing.JButton();
+        jButtonDeleteTrain = new javax.swing.JButton();
+        jButtonCalcTimeSeconds = new javax.swing.JButton();
+        jButtonPlus_5_sec = new javax.swing.JButton();
+        jButtonCalcDeparTime = new javax.swing.JButton();
+        jLabelTitleTime = new javax.swing.JLabel();
+        jLabelHour = new javax.swing.JLabel();
+        jLabelMin = new javax.swing.JLabel();
+        jLabelSec = new javax.swing.JLabel();
+        jLabelDepartureTime = new javax.swing.JLabel();
+        jLabelNumbTrain = new javax.swing.JLabel();
+        jLabelDirect = new javax.swing.JLabel();
+        jLabelDepartHour = new javax.swing.JLabel();
+        jLabelDepartMin = new javax.swing.JLabel();
+        jSpinnerCrn = new javax.swing.JSpinner();
     }
+
+
 }

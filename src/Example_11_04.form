@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="95083" class="javax.swing.JLabel" binding="jLabel1">
+      <component id="95083" class="javax.swing.JLabel" binding="jLabelTitleTime">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,7 +16,7 @@
           <text value="Перевод времени в секунды"/>
         </properties>
       </component>
-      <component id="e9056" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="e9056" class="javax.swing.JTextField" binding="jTextFieldTimeHour">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -24,7 +24,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="69fa1" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="69fa1" class="javax.swing.JTextField" binding="jTextFieldTimeMin">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -32,7 +32,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="66575" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="66575" class="javax.swing.JTextField" binding="jTextFieldTimeSec">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -40,7 +40,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="5834e" class="javax.swing.JButton" binding="jButtonNew">
+      <component id="5834e" class="javax.swing.JButton" binding="jButtonNewTrain">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -48,7 +48,7 @@
           <text value="Новое"/>
         </properties>
       </component>
-      <component id="bf9ba" class="javax.swing.JButton" binding="jButtonDelete">
+      <component id="bf9ba" class="javax.swing.JButton" binding="jButtonDeleteTrain">
         <constraints>
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -72,7 +72,7 @@
           <text value="Button"/>
         </properties>
       </component>
-      <component id="4f4b6" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="4f4b6" class="javax.swing.JTextField" binding="jTextFieldCount">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -80,13 +80,13 @@
         </constraints>
         <properties/>
       </component>
-      <component id="3c8d7" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
+      <component id="3c8d7" class="javax.swing.JSpinner" binding="jSpinnerCrn">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
       </component>
-      <component id="5cb69" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="5cb69" class="javax.swing.JTextField" binding="jTextFieldNumbTrain">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -94,7 +94,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="870fb" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+      <component id="870fb" class="javax.swing.JTextField" binding="jTextFieldDirectTrain">
         <constraints>
           <grid row="9" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -102,7 +102,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="22670" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+      <component id="22670" class="javax.swing.JTextField" binding="jTextFieldHourDepartTrain">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -110,7 +110,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="5efeb" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+      <component id="5efeb" class="javax.swing.JTextField" binding="jTextFieldMinDepartTrain">
         <constraints>
           <grid row="11" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -118,7 +118,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="65133" class="javax.swing.JLabel" binding="jLabel6">
+      <component id="65133" class="javax.swing.JLabel" binding="jLabelNumbTrain">
         <constraints>
           <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -126,7 +126,7 @@
           <text value="Номер поезда"/>
         </properties>
       </component>
-      <component id="47ef7" class="javax.swing.JLabel" binding="jLabel7">
+      <component id="47ef7" class="javax.swing.JLabel" binding="jLabelDirect">
         <constraints>
           <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -134,7 +134,7 @@
           <text value="Направление"/>
         </properties>
       </component>
-      <component id="d14d4" class="javax.swing.JLabel" binding="jLabel8">
+      <component id="d14d4" class="javax.swing.JLabel" binding="jLabelDepartHour">
         <constraints>
           <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -142,7 +142,7 @@
           <text value="Часы"/>
         </properties>
       </component>
-      <component id="faf37" class="javax.swing.JLabel" binding="jLabel9">
+      <component id="faf37" class="javax.swing.JLabel" binding="jLabelDepartMin">
         <constraints>
           <grid row="11" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -156,7 +156,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="7876f" class="javax.swing.JLabel" binding="jLabel5">
+      <component id="7876f" class="javax.swing.JLabel" binding="jLabelDepartureTime">
         <constraints>
           <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -164,7 +164,7 @@
           <text value="Расчет времени до отправления поезда"/>
         </properties>
       </component>
-      <component id="37c49" class="javax.swing.JLabel" binding="jLabel2">
+      <component id="37c49" class="javax.swing.JLabel" binding="jLabelHour">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -172,7 +172,7 @@
           <text value="Часы"/>
         </properties>
       </component>
-      <component id="40fda" class="javax.swing.JLabel" binding="jLabel3">
+      <component id="40fda" class="javax.swing.JLabel" binding="jLabelMin">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -180,7 +180,7 @@
           <text value="Минуты"/>
         </properties>
       </component>
-      <component id="4f759" class="javax.swing.JLabel" binding="jLabel4">
+      <component id="4f759" class="javax.swing.JLabel" binding="jLabelSec">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
