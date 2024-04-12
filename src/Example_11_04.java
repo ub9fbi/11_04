@@ -53,7 +53,6 @@ public class Example_11_04 extends JFrame {
         jFormattedTextDirectTrain = new javax.swing.JFormattedTextField();
         jFormattedTextHourDepartTrain = new javax.swing.JFormattedTextField();
         jFormattedTextMinDepartTrain = new javax.swing.JFormattedTextField();
-        jTextFieldCount = new javax.swing.JTextField();
         jButtonNewTrain = new javax.swing.JButton();
         jButtonDeleteTrain = new javax.swing.JButton();
         jButtonCalcTimeSeconds = new javax.swing.JButton();
@@ -68,7 +67,13 @@ public class Example_11_04 extends JFrame {
         jLabelDirect = new javax.swing.JLabel();
         jLabelDepartHour = new javax.swing.JLabel();
         jLabelDepartMin = new javax.swing.JLabel();
+        jTextFieldCount = new javax.swing.JTextField();
         jSpinnerCrn = new javax.swing.JSpinner();
+        jTextFieldCount.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
         jButtonNewTrain.addActionListener(new ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNewTrainActionPerformed(evt);
