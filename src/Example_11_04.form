@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Example_11_04">
-  <grid id="27dc6" binding="JPanel" layout-manager="GridLayoutManager" row-count="13" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="JPanel" layout-manager="GridLayoutManager" row-count="15" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="542" height="504"/>
+      <xy x="20" y="20" width="610" height="592"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -72,7 +72,7 @@
       </component>
       <component id="65133" class="javax.swing.JLabel" binding="jLabelNumbTrain">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Номер поезда"/>
@@ -80,7 +80,7 @@
       </component>
       <component id="47ef7" class="javax.swing.JLabel" binding="jLabelDirect">
         <constraints>
-          <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Направление"/>
@@ -108,14 +108,6 @@
         </constraints>
         <properties/>
       </component>
-      <component id="7876f" class="javax.swing.JLabel" binding="jLabelDepartureTime">
-        <constraints>
-          <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Расчет времени до отправления поезда"/>
-        </properties>
-      </component>
       <component id="37c49" class="javax.swing.JLabel" binding="jLabelHour">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
@@ -142,7 +134,7 @@
       </component>
       <component id="2a842" class="javax.swing.JButton" binding="jButtonCalcDeparTime">
         <constraints>
-          <grid row="12" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Расчет времени до отправления"/>
@@ -166,7 +158,7 @@
       </component>
       <component id="ae488" class="javax.swing.JFormattedTextField" binding="jFormattedTextNumbTrain">
         <constraints>
-          <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -174,7 +166,7 @@
       </component>
       <component id="eaeed" class="javax.swing.JFormattedTextField" binding="jFormattedTextDirectTrain">
         <constraints>
-          <grid row="9" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -195,6 +187,38 @@
           </grid>
         </constraints>
         <properties/>
+      </component>
+      <component id="20979" class="javax.swing.JTextField" binding="jTextFieldminutesBeforeTrainDeparts">
+        <constraints>
+          <grid row="13" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="17d7a" class="javax.swing.JLabel" binding="jLabelDepart">
+        <constraints>
+          <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="До отправления поезда:"/>
+        </properties>
+      </component>
+      <component id="e86a2" class="javax.swing.JLabel" binding="jLabelTrainDepartureTime">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Время отправления поезда"/>
+        </properties>
+      </component>
+      <component id="7876f" class="javax.swing.JLabel" binding="jLabelDepartureTime">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Расчет времени до отправления поезда"/>
+        </properties>
       </component>
     </children>
   </grid>

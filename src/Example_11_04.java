@@ -1,6 +1,5 @@
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -35,6 +34,9 @@ public class Example_11_04 extends JFrame {
     private JLabel jLabelDepartMin;
     private JSpinner jSpinnerCrn;
     private javax.swing.JPanel JPanel;
+    private JTextField jTextFieldminutesBeforeTrainDeparts;
+    private JLabel jLabelDepart;
+    private JLabel jLabelTrainDepartureTime;
 
     public Example_11_04() {
         initComponents();

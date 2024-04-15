@@ -6,14 +6,7 @@ public class Train extends Time {
     public int departureHour;
     public int departureMin;
 
-    public int calculateMinutesUntilDeparture(int inputHours, int inputMinutes, int inputSeconds) {
-        TimeData inputTime = new TimeData(inputHours, inputMinutes, inputSeconds);
-
-        int currentTimeInSeconds = this.calculateTotalSeconds();
-        int inputTimeInSeconds = inputTime.calculateTotalSeconds();
-
-        int differenceInSeconds = Math.max(inputTimeInSeconds - currentTimeInSeconds, 0);
-
-        return differenceInSeconds / 60;
+    public void calculateMinutesToDeparture(){
+        int minutes = (departureHour - hour) * 60 + (departureMin - min);
     }
 }
