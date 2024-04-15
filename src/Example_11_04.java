@@ -12,9 +12,8 @@ public class Example_11_04 extends JFrame {
     //  поля ввода
     private JTextField jTextFieldTimeHour;
     private JTextField jTextFieldTimeMin;
-    private JFormattedTextField jFormattedTextTimeSec;
-    private JFormattedTextField jFormattedTextNumbTrain;
-    private JFormattedTextField jFormattedTextDirectTrain;
+    private JTextField jTextFieldTimeSec;
+    private JTextField jTextNumbTrain;
     private JFormattedTextField jFormattedTextHourDepartTrain;
     private JFormattedTextField jFormattedTextMinDepartTrain;
     private JTextField jTextFieldCount;
@@ -34,25 +33,23 @@ public class Example_11_04 extends JFrame {
     private JLabel jLabelDepartMin;
     private JSpinner jSpinnerCrn;
     private javax.swing.JPanel JPanel;
-    private JTextField jTextFieldminutesBeforeTrainDeparts;
+    private JTextField jTextFieldMinutesBeforeTrainDeparts;
     private JLabel jLabelDepart;
     private JLabel jLabelTrainDepartureTime;
+    private JTextField jTextDirectTrain;
 
     public Example_11_04() {
         initComponents();
         trainArrayList = new ArrayList<Train>();
         currentInd = trainArrayList.size() -1;
-
-
-
     }
 
     private void initComponents() {
         jTextFieldTimeHour = new javax.swing.JTextField();
         jTextFieldTimeMin = new javax.swing.JTextField();
-        jFormattedTextTimeSec = new javax.swing.JFormattedTextField();
-        jFormattedTextNumbTrain = new javax.swing.JFormattedTextField();
-        jFormattedTextDirectTrain = new javax.swing.JFormattedTextField();
+        jTextFieldTimeSec = new javax.swing.JTextField();
+        jTextNumbTrain = new javax.swing.JTextField();
+        jTextDirectTrain = new javax.swing.JTextField();
         jFormattedTextHourDepartTrain = new javax.swing.JFormattedTextField();
         jFormattedTextMinDepartTrain = new javax.swing.JFormattedTextField();
         jButtonNewTrain = new javax.swing.JButton();
@@ -71,6 +68,10 @@ public class Example_11_04 extends JFrame {
         jLabelDepartMin = new javax.swing.JLabel();
         jTextFieldCount = new javax.swing.JTextField();
         jSpinnerCrn = new javax.swing.JSpinner();
+        jTextFieldMinutesBeforeTrainDeparts = new javax.swing.JTextField();
+        jLabelDepart = new javax.swing.JLabel();
+        jLabelTrainDepartureTime = new javax.swing.JLabel();
+
         jTextFieldCount.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
@@ -99,36 +100,37 @@ public class Example_11_04 extends JFrame {
             }
 
         });
+
     }
+    // метод для копирования из обьекта в поля формы
     protected void getTrain() {
         if (currentInd >= 0) {
             jTextFieldTimeHour.setText(String.valueOf(trainArrayList.get(currentInd).hour));
             jTextFieldTimeMin.setText(String.valueOf(trainArrayList.get(currentInd).min));
-            jFormattedTextTimeSec.setText("" + trainArrayList.get(currentInd).sec);
-            jFormattedTextNumbTrain.setText("" + trainArrayList.get(currentInd).trainNumber);
-            jFormattedTextDirectTrain.setText("" + trainArrayList.get(currentInd).directionTrain);
+            jTextFieldTimeSec.setText("" + trainArrayList.get(currentInd).sec);
+            jTextNumbTrain.setText("" + trainArrayList.get(currentInd).trainNumber);
+            jTextDirectTrain.setText("" + trainArrayList.get(currentInd).directionTrain);
             jFormattedTextHourDepartTrain.setText("" + trainArrayList.get(currentInd).departureHour);
             jFormattedTextMinDepartTrain.setText("" + trainArrayList.get(currentInd).departureMin);
         }
     }
+    // метод для записи в поля обьекта из текстовых полей формы
     protected void setTrain() {
         if ((currentInd >= 0) && ((jTextFieldTimeHour.getText() != null) && (jTextFieldTimeMin.getText() != null))) {
             trainArrayList.get(currentInd).hour = Integer.parseInt(jTextFieldTimeHour.getText());
             trainArrayList.get(currentInd).min = Integer.parseInt(jTextFieldTimeMin.getText());
             try {
-                trainArrayList.get(currentInd).sec = new Integer(jFormattedTextTimeSec.getText());
+                trainArrayList.get(currentInd).sec = new Integer(jTextFieldTimeSec.getText());
             } catch (Exception e) {
                 trainArrayList.get(currentInd).sec = 0;
-                jFormattedTextTimeSec.setText(null);
+                jTextFieldTimeSec.setText(null);
             }
             try {
-                trainArrayList.get(currentInd).trainNumber = new Integer(jFormattedTextNumbTrain.getText());
+                trainArrayList.get(currentInd).trainNumber = new Integer(jTextNumbTrain.getText());
             } catch (Exception e) {
                 trainArrayList.get(currentInd).trainNumber = 0;
-                jFormattedTextNumbTrain.setText(null);
+                jTextNumbTrain.setText(null);
             }
-
-
         }
     }
     //  обработчик для кнопки "Новое"
