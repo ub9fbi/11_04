@@ -14,6 +14,6 @@ public class Time {
     };
 
     public void sumFiveSecond() {
-        localTime.plusSeconds(5);
+        sec =+ 5;
     }
 }
