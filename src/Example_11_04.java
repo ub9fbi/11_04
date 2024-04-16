@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -37,70 +38,148 @@ public class Example_11_04 extends JFrame {
     private JLabel jLabelDepart;
     private JLabel jLabelTrainDepartureTime;
     private JTextField jTextDirectTrain;
+    private JTextField jTextFieldMinDepartTrain;
+    private JTextField jTextFieldHourDepartTrain;
 
     public Example_11_04() {
-        initComponents();
         trainArrayList = new ArrayList<Train>();
         currentInd = trainArrayList.size() -1;
-    }
 
-    private void initComponents() {
-        jTextFieldTimeHour = new javax.swing.JTextField();
-        jTextFieldTimeMin = new javax.swing.JTextField();
-        jTextFieldTimeSec = new javax.swing.JTextField();
-        jTextNumbTrain = new javax.swing.JTextField();
-        jTextDirectTrain = new javax.swing.JTextField();
-        jFormattedTextHourDepartTrain = new javax.swing.JFormattedTextField();
-        jFormattedTextMinDepartTrain = new javax.swing.JFormattedTextField();
-        jButtonNewTrain = new javax.swing.JButton();
-        jButtonDeleteTrain = new javax.swing.JButton();
-        jButtonCalcTimeSeconds = new javax.swing.JButton();
-        jButtonPlus_5_sec = new javax.swing.JButton();
-        jButtonCalcDeparTime = new javax.swing.JButton();
-        jLabelTitleTime = new javax.swing.JLabel();
-        jLabelHour = new javax.swing.JLabel();
-        jLabelMin = new javax.swing.JLabel();
-        jLabelSec = new javax.swing.JLabel();
-        jLabelDepartureTime = new javax.swing.JLabel();
-        jLabelNumbTrain = new javax.swing.JLabel();
-        jLabelDirect = new javax.swing.JLabel();
-        jLabelDepartHour = new javax.swing.JLabel();
-        jLabelDepartMin = new javax.swing.JLabel();
-        jTextFieldCount = new javax.swing.JTextField();
-        jSpinnerCrn = new javax.swing.JSpinner();
-        jTextFieldMinutesBeforeTrainDeparts = new javax.swing.JTextField();
-        jLabelDepart = new javax.swing.JLabel();
-        jLabelTrainDepartureTime = new javax.swing.JLabel();
+        jLabelTitleTime = new javax.swing.JLabel();//
 
-        jTextFieldCount.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        jLabelHour = new javax.swing.JLabel();//
+        jLabelMin = new javax.swing.JLabel();//
+        jLabelSec = new javax.swing.JLabel();//
+        jTextFieldTimeHour = new javax.swing.JTextField();//
+        jTextFieldTimeMin = new javax.swing.JTextField();//
+        jTextFieldTimeSec = new javax.swing.JTextField();//
+        jSpinnerCrn = new javax.swing.JSpinner();//
+        jTextFieldCount = new javax.swing.JTextField();//
+        jButtonNewTrain = new javax.swing.JButton();//
+        jButtonDeleteTrain = new javax.swing.JButton();//
+        jButtonCalcTimeSeconds = new javax.swing.JButton();//
+        jButtonPlus_5_sec = new javax.swing.JButton();//
+
+        jLabelNumbTrain = new javax.swing.JLabel();//
+        jLabelDirect = new javax.swing.JLabel();//
+        jTextNumbTrain = new javax.swing.JTextField();//
+        jTextDirectTrain = new javax.swing.JTextField();//
+
+        jLabelTrainDepartureTime = new javax.swing.JLabel();//
+
+        jLabelDepartHour = new javax.swing.JLabel();//
+        jLabelDepartMin = new javax.swing.JLabel();//
+        jTextFieldHourDepartTrain = new javax.swing.JTextField();//
+        jTextFieldMinDepartTrain = new javax.swing.JTextField();//
+
+        jLabelDepartureTime = new javax.swing.JLabel();//
+
+        jLabelDepart = new javax.swing.JLabel();//
+
+        jTextFieldMinutesBeforeTrainDeparts = new javax.swing.JTextField();//
+        jButtonCalcDeparTime = new javax.swing.JButton();//
+
+
+
+        // слушатель для кнопки + 5 сек
+        jButtonPlus_5_sec.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPlus_5_sec(evt);
+            }
+        });
+        /*//слушатель окна часа
+        jTextFieldTimeHour.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+
+            }
+        });*/
+        /*// слушатель окна минут
+        jTextFieldTimeMin.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+            }
+        });*/
+        /*// слушатель окна секунд
+        jTextFieldTimeSec.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+            }
+        });*/
+        // слушатель счетчика JSpinnerCrn
+        jSpinnerCrn.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
 
             }
         });
-        jButtonNewTrain.addActionListener(new ActionListener() {
+        /*// слушатель окна вывода количества элементов в списке
+        jTextFieldCount.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+            }
+        });*/
+        // слушатель кнопки New
+        jButtonNewTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNewTrainActionPerformed(evt);
             }
         });
-
-        jButtonDeleteTrain.addActionListener(new ActionListener() {
+        // слушатель кнопки Del
+        jButtonDeleteTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteTrainActoinPerformed(evt);
             }
         });
-        jButtonCalcTimeSeconds.addActionListener(new ActionListener() {
-
+        // слушатель кнопки расчета секунд
+        jButtonCalcTimeSeconds.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCalcTimeSeconds(evt);
+
             }
         });
-        jSpinnerCrn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSpinnerCrnStateChanged(evt);
+        // слушатель окна ввода номера поезда
+        jTextNumbTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
             }
-
         });
+        // слушатель окна ввода направления поезда
+        jTextDirectTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
 
+            }
+        });
+        // слушатель окна ввода отправления поезда часах
+        jTextFieldHourDepartTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        // слушатель окна ввода отправления поезда в минутах
+        jTextFieldMinDepartTrain.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        // слушатель окна вывода минут до отправления поезда
+        jTextFieldMinutesBeforeTrainDeparts.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMinutesBeforeTrainDeparts(evt);
+            }
+        });
     }
     // метод для копирования из обьекта в поля формы
     protected void getTrain() {
@@ -116,7 +195,7 @@ public class Example_11_04 extends JFrame {
     }
     // метод для записи в поля обьекта из текстовых полей формы
     protected void setTrain() {
-        if ((currentInd >= 0) && ((jTextFieldTimeHour.getText() != null) && (jTextFieldTimeMin.getText() != null))) {
+        if ((currentInd >= 0) && (jTextFieldTimeHour.getText() != null)) {
             trainArrayList.get(currentInd).hour = Integer.parseInt(jTextFieldTimeHour.getText());
             trainArrayList.get(currentInd).min = Integer.parseInt(jTextFieldTimeMin.getText());
             try {
@@ -133,7 +212,7 @@ public class Example_11_04 extends JFrame {
             }
         }
     }
-    //  обработчик для кнопки "Новое"
+    //  обработчик для кнопки "New"
     public void jButtonNewTrainActionPerformed(ActionEvent e) {
         setTrain();
         trainArrayList.add(new Train());
@@ -142,7 +221,7 @@ public class Example_11_04 extends JFrame {
         jTextFieldCount.setText("" + (currentInd + 1));
         jSpinnerCrn.setValue(currentInd);
     }
-    //  обработчик для кнопки удаления
+    //  обработчик для кнопки Delete
     private void jButtonDeleteTrainActoinPerformed (ActionEvent evt) {
         trainArrayList.remove(currentInd);
         currentInd = trainArrayList.size()-1;
@@ -168,14 +247,27 @@ public class Example_11_04 extends JFrame {
         if (currentInd > trainArrayList.size() - 1) {
             currentInd = trainArrayList.size() - 1;
             jSpinnerCrn.setValue(currentInd);
-
         } else if (currentInd < 0) {
             currentInd = 0;
             jSpinnerCrn.setValue(currentInd);
         }
         getTrain();
-
     }
+    // вызов метода из класса Train
+    public void jTextFieldMinutesBeforeTrainDeparts(ActionEvent evt) {
+        setTrain();
+        for (int i = 0; i < trainArrayList.size(); i++) {
+            trainArrayList.get(i).calculateMinutesToDeparture();
+        }
+    }
+
+    public void jButtonPlus_5_sec(ActionEvent e) {
+        setTrain();
+        for (int i = 0; i < trainArrayList.size(); i++) {
+            trainArrayList.get(i).sumFiveSecond();
+        }
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Example_11_04");
         frame.setContentPane(new Example_11_04().JPanel);

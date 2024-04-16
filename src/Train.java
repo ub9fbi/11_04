@@ -6,7 +6,8 @@ public class Train extends Time {
     public int departureHour;
     public int departureMin;
 
-    public void calculateMinutesToDeparture(){
+    public int calculateMinutesToDeparture(){
         int minutes = (departureHour - hour) * 60 + (departureMin - min);
+        return minutes;
     }
 }
